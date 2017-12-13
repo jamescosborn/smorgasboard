@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Album to Inventory</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Album Title:</label>
+        <br>
+        <input #newTitle>
+      </div>
+
+      <div>
+        <label>Album Artist:</label>
+        <br>
+        <input #newArtist>
+      </div>
+
+      <div>
+        <label>Album Description:</label>
+        <br>
+        <textarea #newDescription></textarea>
+      </div>
+      <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value); newTitle.value=''; newArtist.value=''; newDescription.value=''">Add</button>
+    </div>
+  </div>
+</div>
