@@ -1,10 +1,13 @@
 ## Smorgasboard 12-18-17
 
-by James Osborn
+
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 Mark Woodward
 
 Joseph Tomlinson
+bizzclaw1@gmail.com
 
 Elliot Burin
 eburin2@gmail.com
