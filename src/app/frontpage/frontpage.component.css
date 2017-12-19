@@ -18,7 +18,7 @@
 }
 
 .fetus {
-  margin-left: -200px;
+  margin-left: -130px;
   margin-bottom: 15px;
   width: 400px;
   height: 200px;
@@ -34,4 +34,9 @@ p{
   font-size: 28px;
   font-weight: 600;
   display: block;
+}
+
+.paragraph {
+  display: block;
+  font-size: 20px;
 }

@@ -1,0 +1,12 @@
+#smaller {
+  height: 50px;
+  width: 70px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#centered {
+  margin-left: 10%;
+  margin-top: 30px;
+}

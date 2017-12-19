@@ -1,9 +1,18 @@
 #center {
-  display: inline;
-  margin-left: 450px;
-  color: red;
+  display: block;
+margin-left: 35vw;
+
 }
+
 
 nav {
   background-color: white;
+}
+
+.margin {
+  margin-left: -300px;
+}
+
+.margin2 {
+  margin-left: -200px;
 }

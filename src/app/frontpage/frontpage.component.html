@@ -2,30 +2,39 @@
 <div class="container">
   <div id="img">
     <div id="image">
-      <img class="fetus" src="/src/resources/img/placeholder3.jpg">
+      <img id="img" class="fetus" src="/src/resources/img/placeholder.png">
       <ul id="article-one">
-        <li class="headline">This is a sentence about otto maddox</li>
+        <li class="headline">Lost In Translation movie review</li>
+        <li class="paragraph">This is a movie review of the film "Lost in Translation"</li>
+        <li class="paragraph">directed by Sophia Coppella and starring Bill Murray.</li>
       </ul>
     </div>
     <div id="image-two">
-      <img class="fetus" src="/src/resources/img/placeholder3.jpg">
+      <img id="img2" class="fetus" src="/src/resources/img/placeholder2.png">
       <ul>
         <li class="headline">This is a sentence about otto maddox</li>
+        <li class="paragraph">This is not a movie review of the film "Lost in Translation"</li>
+        <li class="paragraph">directed by Sophia Coppella and starring Bill Murray.</li>
+        <li class="paragraph">Lorem ipsum lorem ipsum lorem ipsum</li>
       </ul>
     </div>
     <div id="image-three">
-      <img class="fetus" src="/src/resources/img/placeholder3.jpg">
+      <img id="img3" class="fetus" src="/src/resources/img/placeholder3.jpg">
       <ul id="article-three">
-        <li class="headline">This is a sentence about otto maddox</li>
+        <li class="headline">Header for an upcoming featured article.</li>
+        <li class="paragraph">This is a movie review of the film "Lost in Translation"</li>
+        <li class="paragraph">directed by Sophia Coppella and starring Bill Murray.</li>
+        <li class="paragraph">sample text. sample text. sample text.</li>
       </ul>
     </div>
   </div>
 </div>
-<div *ngFor="let article of articles | async" class="panel panel-default">
+
+<div *ngFor="let article of articles" class="panel panel-default">
   <div class="panel-body">
-    <h3 (click)="goToDetailPage(article)"><em>{{article.title}}</em> by {{article.artist}}</h3>
+    <h3 (click)="goToDetailPage(article)"><em>{{article.data.head}}</em> by {{article.data.byline}}</h3>
     <div *ngIf="currentRoute === '/admin'">
-      {{article.description}}
+      {{article.data.description}}
       <hr>
       <app-edit-article [selectedArticle]="article"></app-edit-article>
   </div>

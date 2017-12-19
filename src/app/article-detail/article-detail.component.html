@@ -1,5 +1,9 @@
 <div>
-  <h3>{{(articleToDisplay | async).title}}</h3>
-  <h4>{{(articleToDisplay | async).artist}}</h4>
-  <p>{{(articleToDisplay | async).description}}</p>
+  <h1>{{(articleToDisplay).data.head}}</h1>
+  <h4><img id="smaller" src="{{(articleToDisplay).data.avatar}}"> {{(articleToDisplay).data.byline}}</h4>
+  <p>{{(articleToDisplay).data.body}}</p>
+  <p>{{(articleToDisplay).data.body}}</p>
+  <p>{{(articleToDisplay).data.body}}</p>
+  <p>{{(articleToDisplay).data.body}}</p>
+  <p><img id="centered" src="{{(articleToDisplay).data.image}}"></p>
 </div>
