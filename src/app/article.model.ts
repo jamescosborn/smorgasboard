@@ -8,6 +8,17 @@ export class Article  {
     return ArticleService.getArticles();
   }
 
+  static getFeatured() {
+    let all = Article.getAll();
+    var featured = [];
+    all.forEach(function(article) {
+      if (article.data.featured && featured.length < 3) {
+        featured.push(article)
+      }
+    });
+    return featured;
+  }
+
   constructor(data) {
     this.data = data;
   }
