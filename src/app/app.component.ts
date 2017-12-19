@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'smorgasbord';
+  now: Date;
+
+  ngOnInit() {
+    this.now = new Date();
+  }
+
 }

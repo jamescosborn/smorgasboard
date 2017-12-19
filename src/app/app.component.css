@@ -1,9 +1,16 @@
 #center {
   display: block;
-margin-left: 35vw;
-
+  margin-left: 35vw;
+  /*width: 25%;
+  height: 18%;*/
 }
 
+#cooper {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-right: 0;
+}
 
 nav {
   background-color: white;
@@ -15,4 +22,26 @@ nav {
 
 .margin2 {
   margin-left: -200px;
+}
+
+#wreath {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  padding-bottom: 10px;
+}
+
+#wreath-two {
+  width: 100px;
+  height: 100px;
+  margin-left: -500px;
+  padding-bottom: 10px;
+}
+
+#search {
+  margin-left: 20vw;
+  width: 200px;
+  height: 30px;
+  border: 3px solid black;
+  margin-top: 25px;
 }
