@@ -12,14 +12,15 @@ import { FirebaseListObservable } from 'angularfire2/database';
   providers: [ArticleService]
 })
 export class FrontpageComponent implements OnInit {
-  articles: FirebaseListObservable<any[]>;
+  // articles: FirebaseListObservable<any[]>;
+  articles: Array<any>;
   currentRoute: string = this.router.url;
 
   constructor(private router: Router, private articleService: ArticleService) {}
 
   ngOnInit() {
     this.articles = this.articleService.getArticles();
-
+    console.log(this.articles);
   }
 
   goToDetailPage(clickedArticle) {
