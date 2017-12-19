@@ -15,13 +15,13 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 export class ArticleDetailComponent implements OnInit {
 
   articleId: string;
-  articleToDisplay: Article;
+  articleToDisplay;
   constructor(private route: ActivatedRoute, private location: Location, private articleService: ArticleService) {}
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
       this.articleId = urlParameters['id'];
-      this.articleToDisplay = this.articleService.getArticles()[0];
+      this.articleToDisplay = this.articleService.getArticleById(this.articleId);
     });
   }
 

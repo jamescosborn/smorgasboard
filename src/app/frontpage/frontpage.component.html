@@ -30,7 +30,7 @@
   </div>
 </div>
 
-<div *ngFor="let article of articles" class="panel panel-default">
+<div *ngFor="let article of articles | async" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(article)"><em>{{article.data.head}}</em> by {{article.data.byline}}</h3>
     <div *ngIf="currentRoute === '/admin'">

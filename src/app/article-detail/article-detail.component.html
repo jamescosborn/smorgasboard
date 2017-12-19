@@ -1,9 +1,6 @@
-<div>
-  <h1>{{(articleToDisplay).data.head}}</h1>
-  <h4><img id="smaller" src="{{(articleToDisplay).data.avatar}}"> {{(articleToDisplay).data.byline}}</h4>
-  <p>{{(articleToDisplay).data.body}}</p>
-  <p>{{(articleToDisplay).data.body}}</p>
-  <p>{{(articleToDisplay).data.body}}</p>
-  <p>{{(articleToDisplay).data.body}}</p>
-  <p><img id="centered" src="{{(articleToDisplay).data.image}}"></p>
+<div *ngIf="articleToDisplay | async">
+  <h1>{{(articleToDisplay | async).data.head}}</h1>
+  <h4><img id="smaller" src="{{(articleToDisplay | async).data.avatar}}"> {{(articleToDisplay | async).data.byline}}</h4>
+  <p>{{(articleToDisplay | async).data.body }}</p>
+  <p><img id="centered" src="{{(articleToDisplay | async).data.image}}"></p>
 </div>
