@@ -40,3 +40,8 @@ p{
   display: block;
   font-size: 20px;
 }
+
+.image-four {
+  display: flex;
+  flex-direction: row;
+}
