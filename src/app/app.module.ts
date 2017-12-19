@@ -4,16 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
-import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
-import { EditAlbumComponent } from './edit-album/edit-album.component';
+import { EditArticleComponent } from './edit-article/edit-article.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,12 +24,11 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,
     AboutComponent,
     FrontpageComponent,
-    AlbumDetailComponent,
+    ArticleDetailComponent,
     AdminComponent,
-    EditAlbumComponent
+    EditArticleComponent
   ],
   imports: [
     BrowserModule,

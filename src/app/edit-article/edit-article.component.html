@@ -1,0 +1,16 @@
+<h4>Edit Article</h4>
+
+<label>New Article Title:</label>
+<input [(ngModel)]="selectedArticle.title">
+<br>
+
+<label>New Article Artist:</label>
+<input [(ngModel)]="selectedArticle.artist">
+<br>
+
+<label>New Article Description:</label>
+<input [(ngModel)]="selectedArticle.description">
+
+<button (click)="beginUpdatingArticle(selectedArticle)">Update</button>
+<hr>
+<button (click)="beginDeletingArticle(selectedArticle)">Delete</button>

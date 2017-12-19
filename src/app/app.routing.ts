@@ -1,16 +1,11 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
-import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
-  {
-    path: 'marketplace',
-    component: WelcomeComponent
-  },
 
   {
     path: 'about',
@@ -23,8 +18,8 @@ const appRoutes: Routes = [
   },
 
   {
-    path: 'albums/:id',
-    component: AlbumDetailComponent
+    path: 'articles/:id',
+    component: ArticleDetailComponent
   },
 
   {

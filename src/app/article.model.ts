@@ -1,3 +1,3 @@
-export class Album {
+export class Article {
   constructor (public title: string, public artist: string, public description: string) { }
 }
