@@ -25,13 +25,7 @@ export class ArticleService {
   updateArticle(localUpdatedArticle) {
     const articleEntryInFirebase = this.getArticleById(localUpdatedArticle.$key);
     articleEntryInFirebase.update({
-<<<<<<< HEAD
-      title: localUpdatedArticle.title,
-      artist: localUpdatedArticle.artist,
-      description: localUpdatedArticle.description
-=======
-      data: localUpdatedArticle.data;
->>>>>>> model
+      data: localUpdatedArticle.data
     });
   }
 
@@ -39,9 +33,5 @@ export class ArticleService {
     const articleEntryInFirebase = this.getArticleById(localArticleToDelete.$key);
     articleEntryInFirebase.remove();
   }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> model
 }
