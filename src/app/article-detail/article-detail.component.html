@@ -1,6 +1,11 @@
 <div *ngIf="articleToDisplay | async">
   <h1>{{(articleToDisplay | async).data.head}}</h1>
-  <h4><img id="smaller" src="{{(articleToDisplay | async).data.avatar}}"> {{(articleToDisplay | async).data.byline}}</h4>
+  <div id="avatar-border">
+    <div class="add-grid">
+      <img id="smaller" src="{{(articleToDisplay | async).data.avatar}}">
+    </div>
+  </div>
+  <h4>{{(articleToDisplay | async).data.byline}}</h4>
   <p>{{(articleToDisplay | async).data.body }}</p>
   <p><img id="centered" src="{{(articleToDisplay | async).data.image}}"></p>
 </div>

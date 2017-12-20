@@ -1,5 +1,6 @@
 .container {
-  width: 80%;
+  max-width: 80%;
+  margin: auto;
 }
 
 #image {
@@ -51,7 +52,7 @@
 
 #uni {
   width: 1140px;
-  height: 300px;
+  height: auto;
   margin-bottom: 30px;
   margin-top: 15px;
 }
