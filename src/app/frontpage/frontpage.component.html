@@ -1,42 +1,22 @@
 <div class="container">
-  <div id="img">
-    <div id="image">
-      <img id="img" class="fetus" src="/src/resources/img/placeholder.png">
-      <ul id="article-one">
-        <li class="headline">Lost In Translation movie review</li>
-        <li class="paragraph">This is a movie review of the film "Lost in Translation"</li>
-        <li class="paragraph">directed by Sophia Coppella and starring Bill Murray.</li>
-      </ul>
+  <div *ngIf="currentRoute !== '/admin'">
+    <div *ngFor="let article of articles | async | featured">
+      <div class="featured-container">
+        <img class="featured" src="{{article.data.image}}">
+      </div>
+        <p (click)="goToDetailPage(article)" class="headline">{{article.data.head}}</p>
+        <p class="paragraph">{{article.data.summary}}</p>
     </div>
-    <div id="image-two">
-      <img id="img2" class="fetus" src="/src/resources/img/placeholder2.png">
-      <ul>
-        <li class="headline">This is a sentence about otto maddox</li>
-        <li class="paragraph">This is not a movie review of the film "Lost in Translation"</li>
-        <li class="paragraph">directed by Sophia Coppella and starring Bill Murray.</li>
-        <li class="paragraph">Lorem ipsum lorem ipsum lorem ipsum</li>
-      </ul>
+
+    <div class="image-four">
+      <a href="https://www.youtube.com/watch?v=lJzS-_xKB8k"><img id="fisher" src="/src/resources/img/fisher.jpg" alt="fisher"></a>
+      <img id="monkey" src="/src/resources/img/ad.png" alt="pet moonkey ad">
+      <img id="cellophane" src="/src/resources/img/ad2.jpg" alt="cellophane">
     </div>
-    <div id="image-three">
-      <img id="img3" class="fetus" src="/src/resources/img/placeholder3.jpg">
-      <ul id="article-three">
-        <li class="headline">Header for an upcoming featured article.</li>
-        <li class="paragraph">This is a movie review of the film "Lost in Translation"</li>
-        <li class="paragraph">directed by Sophia Coppella and starring Bill Murray.</li>
-        <li class="paragraph">sample text. sample text. sample text.</li>
-      </ul>
+    <div class="advertisments">
+      <img id="uni" src="/src/resources/img/uni.jpg" alt="unicycle">
     </div>
   </div>
-</div>
-
-<div class="image-four">
-  <a href="https://www.youtube.com/watch?v=lJzS-_xKB8k"><img id="fisher" src="/src/resources/img/fisher.jpg" alt="fisher"></a>
-  <img id="monkey" src="/src/resources/img/ad.png" alt="pet moonkey ad">
-  <img id="cellophane" src="/src/resources/img/ad2.jpg" alt="cellophane">
-</div>
-<div class="advertisments">
-  <img id="uni" src="/src/resources/img/uni.jpg" alt="unicycle">
-</div>
 
 
 <div id="article" *ngFor="let article of articles | async" class="panel panel-default">
