@@ -18,4 +18,8 @@ export class Article  {
   constructor(data) {
     this.data = data;
   }
+
+  save() {
+    
+  }
 }
