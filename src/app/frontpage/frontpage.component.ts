@@ -22,6 +22,6 @@ export class FrontpageComponent implements OnInit {
   }
 
   goToDetailPage(clickedArticle) {
-    this.router.navigate(['articles', clickedArticle.id]);
+    this.router.navigate(['articles', clickedArticle.$key]);
   };
 }

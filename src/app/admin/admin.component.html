@@ -3,25 +3,17 @@
     <h3 class="panel-title">Add New Article to Inventory</h3>
   </div>
   <div class="panel-body">
+    <h2>Add Article</h2>
     <div>
-      <div>
-        <label>Article Title:</label>
-        <br>
-        <input #newTitle>
+      <div *ngFor="let key of dataKeys" class="form-group">
+        <p>{{dataTypes[key].input}}:</p>
+        <div [ngSwitch]="dataTypes[key].type">
+          <input *ngSwitchCase="'string'" class="form-control" [(ngModel)]="newData[key]">
+          <textarea *ngSwitchCase="'textarea'" class="form-control" [(ngModel)]="newData[key]"></textarea>
+          <input type="checkbox" *ngSwitchCase="'bool'" [checked]="newData[key]" (change)="newData[key] = !newData[key]">
+        </div>
       </div>
-
-      <div>
-        <label>Article Artist:</label>
-        <br>
-        <input #newArtist>
-      </div>
-
-      <div>
-        <label>Article Description:</label>
-        <br>
-        <textarea #newDescription></textarea>
-      </div>
-      <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value); newTitle.value=''; newArtist.value=''; newDescription.value=''">Add</button>
+      <button (click)="submitForm()">Confirm</button>
     </div>
   </div>
 </div>
