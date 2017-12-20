@@ -19,12 +19,10 @@ export class AdminComponent implements OnInit {
 
   submitForm() {
     let data: any = Object.assign({}, this.newArticle.data);
-    this.newArticle.data = {};
-    while (data.tags.indexOf(', ') != -1) {
-      data.tags = data.tags.replace(", ", ",");
-    }
-    data.tags = data.tags.split(",");
+    this.newArticle = new Article({});
     const newArticle: Article = new Article(data);
-    this.articleService.addArticle(newArticle);
+    newArticle.convertTags();
+    newArticle.timeStamp();
+    newArticle.save(this.articleService);
   }
 }

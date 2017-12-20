@@ -13,6 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
 import { EditArticleComponent } from './edit-article/edit-article.component';
+import { FeaturePipe } from './featured.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -28,7 +29,8 @@ export const firebaseConfig = {
     FrontpageComponent,
     ArticleDetailComponent,
     AdminComponent,
-    EditArticleComponent
+    EditArticleComponent,
+    FeaturePipe
   ],
   imports: [
     BrowserModule,

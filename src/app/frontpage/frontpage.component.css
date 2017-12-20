@@ -2,17 +2,7 @@
   width: 80%;
 }
 
-#image {
-  display: flex;
-  flex-direction: row;
-}
-
-#image-two {
-  display: flex;
-  flex-direction: row;
-}
-
-#image-three {
+.featured {
   display: flex;
   flex-direction: row;
 }
@@ -57,12 +47,19 @@
 }
 
 
-
-.fetus {
-  margin-left: -130px;
-  margin-bottom: 15px;
-  width: 400px;
+.featured-container {
+  width: 65%;
   height: 200px;
+  overflow: hidden;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+.featured {
+  width: 100%;
+  max-width: auto;
+  height: auto;
 }
 
 p{

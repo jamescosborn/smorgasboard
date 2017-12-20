@@ -1,6 +1,6 @@
 <div *ngIf="articleToDisplay | async">
   <h1>{{(articleToDisplay | async).data.head}}</h1>
   <h4><img id="smaller" src="{{(articleToDisplay | async).data.avatar}}"> {{(articleToDisplay | async).data.byline}}</h4>
-  <p>{{(articleToDisplay | async).data.body }}</p>
   <p><img id="centered" src="{{(articleToDisplay | async).data.image}}"></p>
+  <p>{{(articleToDisplay | async).data.body }}</p>
 </div>
