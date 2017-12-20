@@ -1,4 +1,3 @@
-
 <div class="container">
   <div id="img">
     <div id="image">
@@ -26,15 +25,21 @@
         <li class="paragraph">directed by Sophia Coppella and starring Bill Murray.</li>
         <li class="paragraph">sample text. sample text. sample text.</li>
       </ul>
-     <div class="image-four">
-      <!-- <li><img id="cooper" src="/src/resources/img/akira.jpg" alt="cooper"></li> -->
-      <!-- <li><img id="fisher" src="/src/resources/img/fisher.jpg" alt="fisher"></li> -->
-    </div>
     </div>
   </div>
 </div>
 
-<div *ngFor="let article of articles | async" class="panel panel-default">
+<div class="image-four">
+  <img id="fisher" src="/src/resources/img/fisher.jpg" alt="fisher">
+  <img id="monkey" src="/src/resources/img/ad.png" alt="pet moonkey ad">
+  <img id="cellophane" src="/src/resources/img/ad2.jpg" alt="cellophane">
+</div>
+<div class="advertisments">
+  <img id="uni" src="/src/resources/img/uni.jpg" alt="unicycle">
+</div>
+
+
+<div id="article" *ngFor="let article of articles | async" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(article)"><em>{{article.data.head}}</em> by {{article.data.byline}}</h3>
     <div *ngIf="currentRoute === '/admin'">
@@ -43,3 +48,8 @@
       <app-edit-article [selectedArticle]="article"></app-edit-article>
   </div>
 </div>
+</div>
+<br>
+<br>
+<br>
+<br>

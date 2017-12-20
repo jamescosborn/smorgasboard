@@ -17,6 +17,47 @@
   flex-direction: row;
 }
 
+#image-four {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#fisher {
+  align-self: flex-start;
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 372px;
+  height: 300px;
+
+}
+
+#monkey {
+  margin-top: 15px;
+  height: 300px;
+  width: 300px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+#cellophane {
+  width: 425px;
+  height: 300px;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#uni {
+  width: 1140px;
+  height: 300px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+
+
 .fetus {
   margin-left: -130px;
   margin-bottom: 15px;
@@ -45,3 +86,7 @@ p{
   display: flex;
   flex-direction: row;
 }
+
+/*#article {
+  margin-bottom: 100px;
+}*/

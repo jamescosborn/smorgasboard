@@ -1,6 +1,7 @@
 #center {
   display: block;
   margin-left: 35vw;
+  width: 400px;
   /*width: 25%;
   height: 18%;*/
 }
@@ -17,11 +18,11 @@ nav {
 }
 
 .margin {
-  margin-left: -300px;
+  margin-left: 0;
 }
 
 .margin2 {
-  margin-left: -200px;
+  margin-left: 0;
 }
 
 #wreath {
@@ -29,13 +30,15 @@ nav {
   height: 100px;
   margin-left: 20px;
   padding-bottom: 10px;
+  margin-top: 10px;
 }
 
 #wreath-two {
   width: 100px;
   height: 100px;
-  margin-left: -500px;
+  margin-left: -650px;
   padding-bottom: 10px;
+  margin-top: 10px;
 }
 
 #search {
