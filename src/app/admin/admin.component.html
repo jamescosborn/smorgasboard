@@ -5,14 +5,7 @@
   <div class="panel-body">
     <h2>Add Article</h2>
     <div>
-      <div *ngFor="let key of dataKeys" class="form-group">
-        <p>{{dataTypes[key].input}}:</p>
-        <div [ngSwitch]="dataTypes[key].type">
-          <input *ngSwitchCase="'string'" class="form-control" [(ngModel)]="newData[key]">
-          <textarea *ngSwitchCase="'textarea'" class="form-control" [(ngModel)]="newData[key]"></textarea>
-          <input type="checkbox" *ngSwitchCase="'bool'" [checked]="newData[key]" (change)="newData[key] = !newData[key]">
-        </div>
-      </div>
+      <app-edit-article [selectedArticle]="newArticle"></app-edit-article>
       <button (click)="submitForm()">Confirm</button>
     </div>
   </div>

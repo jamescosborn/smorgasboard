@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ArticleService } from '../article.service';
 import { Article } from '../article.model';
 
@@ -10,28 +10,16 @@ import { Article } from '../article.model';
   providers: [ArticleService]
 })
 export class AdminComponent implements OnInit {
-
   constructor(private articleService: ArticleService) { }
-
-  newData: Object = {};
-  dataTypes: Object = {
-    ['head']: {input: 'Title', type: 'string'},
-    ['byline']: {input: 'Byline', type: 'string'},
-    ['avatar']: {input: 'Avatar (URL)', type: 'string'},
-    ['body']: {input: 'Body', type: 'textarea'},
-    ['image']: {input: 'Image (URL)', type: 'string'},
-    ['tags']: {input: 'Tags (separate by comma)', type: 'string'},
-    ['featured']: {input: 'Featured', type: 'bool'}
-  }
-
-  dataKeys = Object.keys(this.dataTypes);
+  newArticle: Article;
 
   ngOnInit() {
+    this.newArticle = new Article({});
   }
 
   submitForm() {
-    let data: any = Object.assign({}, this.newData);
-    this.newData = {};
+    let data: any = Object.assign({}, this.newArticle.data);
+    this.newArticle.data = {};
     while (data.tags.indexOf(', ') != -1) {
       data.tags = data.tags.replace(", ", ",");
     }

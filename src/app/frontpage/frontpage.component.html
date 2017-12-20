@@ -41,5 +41,8 @@
       {{article.data.description}}
       <hr>
       <app-edit-article [selectedArticle]="article"></app-edit-article>
+      <button (click)="beginUpdatingArticle(article)">Update</button>
+      <hr>
+      <button (click)="beginDeletingArticle(article)">Delete</button>
   </div>
 </div>

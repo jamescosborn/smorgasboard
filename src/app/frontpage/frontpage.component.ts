@@ -23,5 +23,15 @@ export class FrontpageComponent implements OnInit {
 
   goToDetailPage(clickedArticle) {
     this.router.navigate(['articles', clickedArticle.$key]);
-  };
+  }
+
+  beginUpdatingArticle(articleToUpdate) {
+    this.articleService.updateArticle(articleToUpdate);
+  }
+
+  beginDeletingArticle(articleToDelete) {
+    if(confirm("Are you sure you want to delete this item from the inventory?")){
+      this.articleService.deleteArticle(articleToDelete);
+    }
+  }
 }

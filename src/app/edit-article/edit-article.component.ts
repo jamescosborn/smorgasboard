@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ArticleService } from '../article.service';
+import { Article } from '../article.model';
 
 @Component({
   selector: 'app-edit-article',
@@ -11,19 +12,14 @@ import { ArticleService } from '../article.service';
 export class EditArticleComponent implements OnInit {
   @Input() selectedArticle;
 
+  dataTypes = Article.dataTypes;
+  dataKeys = Object.keys(Article.dataTypes);
+  articleData: any;
+
   constructor(private articleService: ArticleService) { }
 
   ngOnInit() {
+    console.log(this.selectedArticle);
+    this.articleData = this.selectedArticle.data;
   }
-
-  beginUpdatingArticle(articleToUpdate) {
-    this.articleService.updateArticle(articleToUpdate);
-  }
-
-  beginDeletingArticle(articleToDelete) {
-    if(confirm("Are you sure you want to delete this item from the inventory?")){
-      this.articleService.deleteArticle(articleToDelete);
-    }
-  }
-
 }
