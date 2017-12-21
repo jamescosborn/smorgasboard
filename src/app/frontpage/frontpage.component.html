@@ -25,9 +25,8 @@
   <div class="row">
     <div class="col-md-4">
       <span class="custom-dropdown big">
-        <select>
-            <option>Date Ascending</option>
-            <option>Date Descending</option>
+        <select (change)="setSorter($event.target.value)">
+          <option *ngFor = "let sorter of sortingMethods; let i = index" value = {{i}}>{{sorter.name}}</option>
         </select>
       </span>
     </div>
@@ -36,7 +35,7 @@
     </div>
   </div>
 
-  <div id="article" *ngFor="let article of articles | async | sorting | search:searchString" class="panel panel-primary">
+  <div id="article" *ngFor="let article of articles | async | sorting:sorterId | search:searchString" class="panel panel-primary">
     <div class="panel-body">
       <h3 (click)="goToDetailPage(article)"><em>{{article.data.head}}</em> by {{article.data.byline}}</h3>
       <hr>

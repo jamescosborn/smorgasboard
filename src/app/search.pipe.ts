@@ -25,7 +25,6 @@ export class SearchPipe implements PipeTransform {
         if (searchTerm == " " || searchTerm == "") {
           continue;
         }
-        console.log("searchTerm = " + searchTerm)
         for (var keyIndex = 0; keyIndex < searchKeys.length && !added; keyIndex ++) {
           let key = searchKeys[keyIndex];
           if (article.data[key] && article.data[key].toLowerCase().indexOf(searchTerm) !== -1) {

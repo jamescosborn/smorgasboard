@@ -18,6 +18,7 @@ export class FrontpageComponent implements OnInit {
   searchString:string;
 
   sortingMethods = Article.sortingMethods;
+  sorterId: number = 0;
   getTimeStamp = Article.getTimeStamp;
 
   constructor(private router: Router, private articleService: ArticleService) {}
@@ -28,6 +29,10 @@ export class FrontpageComponent implements OnInit {
 
   goToDetailPage(clickedArticle) {
     this.router.navigate(['articles', clickedArticle.$key]);
+  }
+
+  setSorter(id) {
+    this.sorterId = id;
   }
 
   beginUpdatingArticle(articleToUpdate) {
