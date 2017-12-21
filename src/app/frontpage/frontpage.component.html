@@ -18,26 +18,30 @@
     <div class="image-four">
       <a href="https://www.youtube.com/watch?v=lJzS-_xKB8k"><img id="fisher" src="/src/resources/img/fisher.jpg" alt="fisher"></a>
       <a href="https://www.youtube.com/watch?v=tVkZNhqsxpk"><img id="monkey" src="/src/resources/img/ad.png" alt="pet moonkey ad"></a>
-      <img id="cellophane" src="/src/resources/img/ad2.jpg" alt="cellophane">
+      <a href="https://www.youtube.com/watch?v=GPgzXHgmSMA"><img id="cellophane" src="/src/resources/img/ad2.jpg" alt="cellophane"></a>
     </div>
     <div class="advertisments">
       <img id="uni" src="/src/resources/img/uni.jpg" alt="unicycle">
     </div>
   </div>
 
-  <button class="btn btn-default dropdown-toggle filter-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li>test</li>
-    <li>test</li>
-    <li>test</li>
-    <li>test</li>
-  </ul>
+  <div class="row">
+    <div class="col-md-4">
+      <span class="custom-dropdown big">
+        <select>
+            <option>Date Ascending</option>
+            <option>Date Descending</option>
+        </select>
+      </span>
+    </div>
+    <div class="col-md-6">
+      <form>
+        <input id="search" type="text" placeholder="search">
+      </form>
+    </div>
+  </div>
 
-
-  <div id="article" *ngFor="let article of articles | async | sorting | search:searchTerm" class="panel panel-default">
+  <div id="article" *ngFor="let article of articles | async | sorting | search:searchString" class="panel panel-primary">
     <div class="panel-body">
       <h3 (click)="goToDetailPage(article)"><em>{{article.data.head}}</em> by {{article.data.byline}}</h3>
       <hr>
