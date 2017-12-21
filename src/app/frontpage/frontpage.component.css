@@ -64,7 +64,7 @@
 }
 
 .featured-image-container {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   width: 100%;
   height: 200px;
@@ -75,9 +75,9 @@
 }
 
 .featured-image {
+  height: auto;
   width: 100%;
   max-width: inherit;
-  height: auto;
 }
 
 .featured-info {

@@ -24,22 +24,37 @@
       <img id="uni" src="/src/resources/img/uni.jpg" alt="unicycle">
     </div>
   </div>
-</div>
+
+  <button class="btn btn-default dropdown-toggle filter-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+  </ul>
 
 
-<div id="article" *ngFor="let article of articles | async | sorting | search:searchTerm" class="panel panel-default">
-  <div class="panel-body">
-    <h3 (click)="goToDetailPage(article)"><em>{{article.data.head}}</em> by {{article.data.byline}}</h3>
-    <div *ngIf="currentRoute === '/admin'">
-      {{article.data.description}}
-      <hr>
-      <app-edit-article [selectedArticle]="article"></app-edit-article>
-      <button (click)="beginUpdatingArticle(article)">Update</button>
-      <hr>
-      <button (click)="beginDeletingArticle(article)">Delete</button>
+  <div id="article" *ngFor="let article of articles | async | sorting | search:searchTerm" class="panel panel-default">
+    <div class="panel-body">
+      <h3 (click)="goToDetailPage(article)"><em>{{article.data.head}}</em> by {{article.data.byline}}</h3>
+      <div *ngIf="currentRoute === '/admin'">
+        {{article.data.description}}
+        <hr>
+        <app-edit-article [selectedArticle]="article"></app-edit-article>
+        <button (click)="beginUpdatingArticle(article)">Update</button>
+        <hr>
+        <button (click)="beginDeletingArticle(article)">Delete</button>
+      </div>
+
     </div>
   </div>
 </div>
+
+
+
 <br>
 <br>
 <br>
