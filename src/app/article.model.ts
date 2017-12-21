@@ -32,6 +32,15 @@ export class Article  {
     },
   ]
 
+  static getTimeStamp(article) {
+    if (!article.data.date) {
+      article.timeStamp();
+    }
+    let timeStamp = new Date(article.data.date)
+    let localeTime = article.data.date.toLocaleString()
+    return localeTime;
+  }
+
   static dataTypes: Object = {
     ['head']: {input: 'Title', type: 'string'},
     ['byline']: {input: 'Byline', type: 'string'},
@@ -55,7 +64,7 @@ export class Article  {
 
   timeStamp() {
     let now = new Date()
-    this.data.date = now.toDateString();
+    this.data.date = now.toUTCString();
   }
 
   convertTags() {

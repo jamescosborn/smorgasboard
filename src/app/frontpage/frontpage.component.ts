@@ -16,6 +16,7 @@ export class FrontpageComponent implements OnInit {
   currentRoute: string = this.router.url;
 
   sortingMethods = Article.sortingMethods;
+  getTimeStamp = Article.getTimeStamp;
 
   constructor(private router: Router, private articleService: ArticleService) {}
 
