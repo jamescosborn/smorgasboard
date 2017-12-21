@@ -17,6 +17,19 @@ export class Article  {
         return output;
       }
     },
+    {
+      name: 'Date Ascending',
+      method: function(input) {
+        let output = []
+        for (var i = 0; i < input.length; i++) {
+          let article = input[i]
+          if (article && article.data && article.data.featured) {
+            output.push(article)
+          }
+        }
+        return output;
+      }
+    },
   ]
 
   static dataTypes: Object = {
