@@ -7,32 +7,30 @@ import { Article } from './article.model';
 })
 
 export class SearchPipe implements PipeTransform {
-  delimiter:string = ",";
-  skipTerms:string[];
-  results:any[]=[];
-  terms:string[];
+  transform(input:any[], searchString:string) {
+    if (!input || !searchString || searchString === '') {
+      return input;
+    }
 
-  transform(ARTICLES:any[],searchTerm:string) {
-    console.log(ARTICLES);
-    if(ARTICLES && searchTerm){
+    let searchKeys = ["title", "byline"];
 
-    ARTICLES.forEach((ARTICLE)=>{
-      this.terms = searchTerm.split(this.delimiter);
-      ARTICLES.forEach((x,xIndex)=>{
-        if( searchTerm.indexOf(x.data.head)>=0   || searchTerm.indexOf(x.data.byLine)>=0  ){
-          this.results.push(x);
-        } else {
-          x.data.tags.forEach((artTag)=>{
-            this.terms.forEach((usrTag)=>{
-                if(artTag==usrTag) {
-                  this.results.push(x);
-                }
-            });
-          });
+    let output = [];
+    let searchTerms = searchString.split(searchString);
+
+    for (var index = 0; index < input.length; index++) {
+      let article = input[index];
+      let added = false;
+      for (var termIndex = 0; termIndex < searchTerms.length; termIndex ++) {
+        let searchTerm = searchTerms[termIndex];
+        for (var keyIndex; keyIndex < searchKeys.length; keyIndex ++) {
+          let key = searchKeys[keyIndex];
+          if (article.data[key].indexOf(searchTerm)) {
+            output.push(article);
+            added = true;
+          }
         }
-      });
-    });
-    return this.results;
-  }
+      }
+    }
+    return output;
   }
 }

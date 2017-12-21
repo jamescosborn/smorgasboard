@@ -1,6 +1,6 @@
 <div class="container">
 
-    <input id="search" type="text" placeholder="search" [(ngModel)]="searchTerm">
+    <input id="search" type="text" placeholder="search" [(ngModel)]="searchString">
 
   <div *ngIf="currentRoute !== '/admin'">
     <div class="row" id="featured-row">
@@ -37,11 +37,11 @@
   </ul>
 
 
-  <div id="article" *ngFor="let article of articles | async | sorting | search:searchTerm" class="panel panel-default">
+  <div id="article" *ngFor="let article of articles | async | sorting | search" class="panel panel-default">
     <div class="panel-body">
       <h3 (click)="goToDetailPage(article)"><em>{{article.data.head}}</em> by {{article.data.byline}}</h3>
       <hr>
-      <h6>{{Article.getTimeStamp(article)}}</h6>
+      <!-- <h6>{{Article.getTimeStamp(article)}}</h6> -->
       <div *ngIf="currentRoute === '/admin'">
         {{article.data.description}}
         <hr>

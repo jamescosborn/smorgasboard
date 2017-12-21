@@ -15,6 +15,7 @@ import { AdminComponent } from './admin/admin.component';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 import { FeaturePipe } from './featured.pipe';
 import { SortingPipe } from './sorting.pipe';
+import { SearchPipe } from './search.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,7 +33,8 @@ export const firebaseConfig = {
     AdminComponent,
     EditArticleComponent,
     FeaturePipe,
-    SortingPipe
+    SortingPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
