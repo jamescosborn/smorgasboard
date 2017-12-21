@@ -1,22 +1,27 @@
 <div class="container">
   <div *ngIf="currentRoute !== '/admin'">
-    <div *ngFor="let article of articles | async | featured">
-      <div class="featured-container">
-        <img class="featured" src="{{article.data.image}}">
+    <div class="row" id="featured-row">
+      <div class="featured col-md-4" *ngFor="let article of articles | async | featured">
+        <div class="featured-image-container">
+          <img class="featured-image" src="{{article.data.image}}">
+        </div>
+        <div class="featured-info">
+          <p (click)="goToDetailPage(article)" class="headline">{{article.data.head}}</p>
+          <p class="paragraph">{{article.data.summary}}</p>
+        </div>
       </div>
-        <p (click)="goToDetailPage(article)" class="headline">{{article.data.head}}</p>
-        <p class="paragraph">{{article.data.summary}}</p>
     </div>
 
     <div class="image-four">
       <a href="https://www.youtube.com/watch?v=lJzS-_xKB8k"><img id="fisher" src="/src/resources/img/fisher.jpg" alt="fisher"></a>
-      <img id="monkey" src="/src/resources/img/ad.png" alt="pet moonkey ad">
+      <a href="https://www.youtube.com/watch?v=tVkZNhqsxpk"><img id="monkey" src="/src/resources/img/ad.png" alt="pet moonkey ad"></a>
       <img id="cellophane" src="/src/resources/img/ad2.jpg" alt="cellophane">
     </div>
     <div class="advertisments">
       <img id="uni" src="/src/resources/img/uni.jpg" alt="unicycle">
     </div>
   </div>
+</div>
 
 
 <div id="article" *ngFor="let article of articles | async" class="panel panel-default">
