@@ -3,6 +3,22 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 export class Article  {
 
+  static sortingMethods: any = [
+    {
+      name: 'Date Descending',
+      method: function(input) {
+        let output = []
+        for (var i = input.length-1; i >= 0; i-=1) {
+          let article = input[i]
+          if (article && article.data && article.data.featured) {
+            output.push(article)
+          }
+        }
+        return output;
+      }
+    },
+  ]
+
   static dataTypes: Object = {
     ['head']: {input: 'Title', type: 'string'},
     ['byline']: {input: 'Byline', type: 'string'},
