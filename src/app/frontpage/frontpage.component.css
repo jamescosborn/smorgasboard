@@ -144,3 +144,15 @@ select {
 #article {
   border: 3px solid black;
 }
+
+a:hover {
+  border-bottom: 30px solid #71EEB8;
+}
+
+.featured-image-container:hover {
+  border: 10px solid red;
+}
+
+#article:hover {
+  border: 5px solid red;
+}
