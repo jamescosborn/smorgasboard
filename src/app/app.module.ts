@@ -14,6 +14,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 import { FeaturePipe } from './featured.pipe';
+import { SortingPipe } from './sorting.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,7 +31,8 @@ export const firebaseConfig = {
     ArticleDetailComponent,
     AdminComponent,
     EditArticleComponent,
-    FeaturePipe
+    FeaturePipe,
+    SortingPipe
   ],
   imports: [
     BrowserModule,
