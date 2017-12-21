@@ -106,7 +106,41 @@ p{
   display: flex;
   flex-direction: row;
 }
+.input {
+  display: flex;
+  justify-content: flex-start;
+}
 
-/*#article {
-  margin-bottom: 100px;
-}*/
+.drop {
+  display: flex;
+  flex-direction: row;
+}
+
+#search {
+  margin-left: 20vw;
+  width: 300px;
+  height: 30px;
+  border: 3px solid black;
+  color: black;
+  margin-left: -150px;
+  padding: 0;
+  margin-bottom: 50px;
+  font-weight: 900;
+  border-radius: 5px;
+}
+
+select {
+  width: 200px;
+  height: 30px;
+  border: 3px solid black;
+  font-weight: 600;
+}
+
+ input::placeholder {
+   color: black;
+   text-align: left;
+ }
+
+#article {
+  border: 3px solid black;
+}

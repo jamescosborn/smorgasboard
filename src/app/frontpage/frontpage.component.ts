@@ -15,7 +15,7 @@ export class FrontpageComponent implements OnInit {
   articles: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
-  searchTerm:string;
+  searchString:string;
 
   sortingMethods = Article.sortingMethods;
   getTimeStamp = Article.getTimeStamp;

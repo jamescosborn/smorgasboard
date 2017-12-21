@@ -12,19 +12,23 @@ export class SearchPipe implements PipeTransform {
       return input;
     }
 
-    let searchKeys = ["title", "byline"];
+    let searchKeys = ["head", "byline"];
 
     let output = [];
-    let searchTerms = searchString.split(searchString);
+    let searchTerms = searchString.split(" ");
 
     for (var index = 0; index < input.length; index++) {
       let article = input[index];
       let added = false;
-      for (var termIndex = 0; termIndex < searchTerms.length; termIndex ++) {
-        let searchTerm = searchTerms[termIndex];
-        for (var keyIndex; keyIndex < searchKeys.length; keyIndex ++) {
+      for (var termIndex = 0; termIndex < searchTerms.length && !added; termIndex ++) {
+        let searchTerm = searchTerms[termIndex].toLowerCase();
+        if (searchTerm == " " || searchTerm == "") {
+          continue;
+        }
+        console.log("searchTerm = " + searchTerm)
+        for (var keyIndex = 0; keyIndex < searchKeys.length && !added; keyIndex ++) {
           let key = searchKeys[keyIndex];
-          if (article.data[key].indexOf(searchTerm)) {
+          if (article.data[key] && article.data[key].toLowerCase().indexOf(searchTerm) !== -1) {
             output.push(article);
             added = true;
           }
