@@ -1,4 +1,7 @@
 <div class="container">
+
+    <input id="search" type="text" placeholder="search" [(ngModel)]="searchTerm">
+
   <div *ngIf="currentRoute !== '/admin'">
     <div class="row" id="featured-row">
       <div class="featured col-md-4" *ngFor="let article of articles | async | featured">
@@ -24,7 +27,7 @@
 </div>
 
 
-<div id="article" *ngFor="let article of articles | async | sorting" class="panel panel-default">
+<div id="article" *ngFor="let article of articles | async | sorting | search:searchTerm" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(article)"><em>{{article.data.head}}</em> by {{article.data.byline}}</h3>
     <div *ngIf="currentRoute === '/admin'">

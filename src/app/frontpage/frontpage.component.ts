@@ -14,7 +14,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class FrontpageComponent implements OnInit {
   articles: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-
+  searchTerm:string;
   constructor(private router: Router, private articleService: ArticleService) {}
 
   ngOnInit() {

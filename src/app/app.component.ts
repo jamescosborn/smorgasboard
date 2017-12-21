@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'smorgasbord';
   now: Date;
-
+  searchTerm:string;
   ngOnInit() {
     this.now = new Date();
   }
