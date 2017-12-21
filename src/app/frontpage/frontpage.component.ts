@@ -18,6 +18,7 @@ export class FrontpageComponent implements OnInit {
   searchTerm:string;
 
   sortingMethods = Article.sortingMethods;
+  getTimeStamp = Article.getTimeStamp;
 
   constructor(private router: Router, private articleService: ArticleService) {}
 

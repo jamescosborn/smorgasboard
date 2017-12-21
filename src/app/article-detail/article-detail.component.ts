@@ -16,12 +16,20 @@ export class ArticleDetailComponent implements OnInit {
 
   articleId: string;
   articleToDisplay;
+  formatedBody = [];
   constructor(private route: ActivatedRoute, private location: Location, private articleService: ArticleService) {}
+
+  formatBody(body) {
+    this.formatedBody = body.split('\n');
+  }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
       this.articleId = urlParameters['id'];
       this.articleToDisplay = this.articleService.getArticleById(this.articleId);
+      this.articleToDisplay.subscribe(article => {
+        this.formatBody(article.data.body);
+      });
     });
   }
 
