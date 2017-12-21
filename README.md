@@ -1,22 +1,51 @@
-## Smorgasboard 12-18-17
+## smorgasboard 12-18-17
 
-
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
-
+by
+James Osborn
 Mark Woodward
-
 Joseph Tomlinson
 bizzclaw1@gmail.com
-
 Elliot Burin
 eburin2@gmail.com
 
-# SMORGASBOARD SMORGASBOARD SMORGASBOARD SMORGASBOARD SMORGASBOARD 
-
 ## Description
 
+Smorgasbaord is a variety news outlet for today's discerning tech and entertainment fan. Unlike other news sites that inundate the reader with only boring news stories, smorgasboard has a variety of content such as food and drink recipes and album and movie reviews. This is a once a year publication, for the holiday 2017 season.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+
+## Technologies Used
+
+- Angular 2
+- node package manager
+- bower
+- Chrome
+- Firebase key
+
 ## Installation
+
+To install all packages to be able to run the website, you must:
+
+```
+Go to Firebase, make an account  
+Go to Get Started  
+Go to Add a project  
+Go to Add Firebase to your web app  
+Copy everything within the brackets  
+Open a command prompt  
+Navigate to the project directory  
+Open project in your favorite text editor (Atom recommended)  
+In the src/app folder, create a new file called api-keys.ts  
+Enter "export const masterFirebaseConfig = {}"  
+Copy everything you got from Firebase to within the brackets  
+Save the file  
+Enter "npm install"  
+Enter "bower install"  
+Enter "ng serve"  
+Open your favorite web browser (Chrome recommended)  
+In the address bar, go to "localhost:4200"
+Enjoy
+```
 
 
 ## Known Bugs
@@ -26,11 +55,6 @@ eburin2@gmail.com
 
 You can contact the developers if you have any problems with this program please contact jamescarlosborn@gmail.com
 
-
-## Technologies Used
-
-- Angular 2
--  
 
 
 ## Specs
