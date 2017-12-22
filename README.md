@@ -21,7 +21,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Screenshot
 
-![alt text](src/resources/img/smorgscreen2.png "A screenshot of the online variety publication smorgasboard")
+![alt text](src/resources/img/smorg3.png "A screenshot of the online variety publication smorgasboard")
 
 ## Technologies Used
 
